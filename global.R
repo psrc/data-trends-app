@@ -20,8 +20,10 @@ library(DT)
 # Package for Excel Data Creation
 library(openxlsx)
 
-#Package for taking scrrenshot of the app
+#Package for taking screenshot of the app
 library(shinyscreenshot)
+#remotes::install_github("dreamRs/capture")
+library(capture)
 
 # Run Modules Files ---------------------------------------------------------------------------
 module_files <- list.files('modules', full.names = TRUE)
