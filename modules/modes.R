@@ -75,8 +75,6 @@ commute_modes_server <- function(id) {
     # Tab layout
     output$modes <- renderUI({
       tagList(
-        tags$img(src="banner.png",  width = "100%", height = "100%",style = "padding-top: 10px; padding-bottom: 10px; border-radius:30px 0 30px 0; position:center", 
-                 alt = "colorful data bars"),
         h1("Mode to Work in the PSRC Region"),
         tags$div(tags$img(src="biking.jpg", width = "25%", height = "25%", style = "padding-top: 10px; float:left; padding-right:20px", 
                  alt = "elected officials riding bikes"),

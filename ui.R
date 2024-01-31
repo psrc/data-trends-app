@@ -22,34 +22,10 @@ shinyUI(
                            .navbar {min-height:25px !important;}'))
     ),
     
-    windowTitle = "Data Trends in the Puget Sound", 
+    windowTitle = "Latest PSRC trend", 
     theme = "styles.css",
     position = "fixed-top",
-    tabPanel(
-    title="Overview", h1("Data Trends by Puget Sound Regional Council"),
-             tags$img(src="banner.png",  width = "100%", height = "100%",style = "padding-top: 10px; padding-bottom: 10px; border-radius:30px 0 30px 0; position:center", 
-                      alt = "colorful data bars"),
-             fluidRow(column(12, style='padding-left:25px; padding-right:25px;padding-bottom: 10px','The Puget Sound Regional Council(PSRC) provides data to help local planners and decision-makers better understand the region and visualize its future.Flip through the tabs at the top to learn more about the latest trends.',
-                             h2('Related Puget Sound Regional Council Data Resources'),
-                             tags$div(
-                                      tags$img(src="trends-image.png", width = "25%", height = "25%", style = "padding-top: 10px; border-radius:30px 0 30px 0;", 
-                                                alt = "trend logo"),
-                                      tags$a(href="https://www.psrc.org/puget-sound-trends", "More Puget Sound Trends at psrc.org")
-                                     ),
-                             tags$div(
-                               tags$img(src="portal.jpg", width = "25%", height = "25%", style = "padding-top: 10px; border-radius:30px 0 30px 0;", 
-                                        alt = "portal picture"),
-                               tags$a(href="https://psrc-psregcncl.hub.arcgis.com/", "PSRC Open Data Portal")
-                                     ),
-                             tags$div(
-                               tags$img(src="community-profiles.jpg", width = "25%", height = "25%", style = "padding-top: 10px; border-radius:30px 0 30px 0;", 
-                                        alt = "portal picture"),
-                               tags$a(href="https://psrcwa.shinyapps.io/community-profiles", "Community Profiles")
-                                      )
-                             
-                            )# end column
-                   )#end fluidRow
-             ), #end mainPanel for Overview Page,
+
              tabPanel(     
              title="Commute Mode",
              value="Mode-Page",
@@ -61,6 +37,31 @@ shinyUI(
                                 )
                              ), # End of Main Panel Modes
                       ), # End of Main Panel Fluid Row for Modes Tab
+    tabPanel(
+      title="More about PSRC trends", h1("Data Trends by Puget Sound Regional Council"),
+      tags$img(src="banner.png",  width = "100%", height = "100%",style = "padding-top: 10px; padding-bottom: 10px; border-radius:30px 0 30px 0; position:center", 
+               alt = "colorful data bars"),
+      fluidRow(column(12, style='padding-left:25px; padding-right:25px;padding-bottom: 10px','The Puget Sound Regional Council(PSRC) provides data to help local planners and decision-makers better understand the region and visualize its future.Flip through the tabs at the top to learn more about the latest trends.',
+                      h2('Related Puget Sound Regional Council Data Resources'),
+                      tags$div(
+                        tags$img(src="trends-image.png", width = "25%", height = "25%", style = "padding-top: 10px; border-radius:30px 0 30px 0;", 
+                                 alt = "trend logo"),
+                        tags$a(href="https://www.psrc.org/puget-sound-trends", "More Puget Sound Trends at psrc.org")
+                      ),
+                      tags$div(
+                        tags$img(src="portal.jpg", width = "25%", height = "25%", style = "padding-top: 10px; border-radius:30px 0 30px 0;", 
+                                 alt = "portal picture"),
+                        tags$a(href="https://psrc-psregcncl.hub.arcgis.com/", "PSRC Open Data Portal")
+                      ),
+                      tags$div(
+                        tags$img(src="community-profiles.jpg", width = "25%", height = "25%", style = "padding-top: 10px; border-radius:30px 0 30px 0;", 
+                                 alt = "portal picture"),
+                        tags$a(href="https://psrcwa.shinyapps.io/community-profiles", "Community Profiles")
+                      )
+                      
+      )# end column
+      )#end fluidRow
+    ),
     
             tabPanel(title=icon("info-circle"),
              value="Data-Source-Page",
