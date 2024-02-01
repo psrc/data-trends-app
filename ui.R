@@ -36,7 +36,7 @@ shinyUI(
                       capture_pdf(
                         selector = "body",
                         filename = "data-trend.pdf",
-                        icon("camera"), "Take a pdf screenshot"
+                        icon("camera"), "Download as PDF"
                       )
                       #screenshotButton(label= "Capture entire page")
       )
@@ -46,13 +46,11 @@ shinyUI(
     tabPanel(
       title="More about trends",
       fluidRow(column(12, style='padding-left:25px; padding-right:25px;',
-                      h1("Data Trends by Puget Sound Regional Council"),
-                tags$img(src="banner.png",  width = "100%", height = "100%",style = "padding-top: 10px; padding-bottom: 10px; border-radius:30px 0 30px 0; position:center", 
-                         alt = "colorful data bars"),
+                      banner_ui('aboutBanner'),
                 'The Puget Sound Regional Council(PSRC) provides data to help local planners and decision-makers better understand the region and visualize its future.Flip through the tabs at the top to learn more about the latest trends.',
                       h2('Related Puget Sound Regional Council Data Resources'),
                       tags$div(
-                        tags$img(src="trends-image.png", width = "25%", height = "25%", style = "padding-top: 10px; border-radius:30px 0 30px 0;", 
+                        tags$img(src="trends-image.png", width = "25%", height = "25%", style = " border-radius:30px 0 30px 0;", 
                                  alt = "trend logo"),
                         tags$a(href="https://www.psrc.org/puget-sound-trends", "More Puget Sound Trends at psrc.org")
                       ),
