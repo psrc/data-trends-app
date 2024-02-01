@@ -20,8 +20,6 @@ library(DT)
 # Package for Excel Data Creation
 library(openxlsx)
 
-#Package for taking screenshot of the app
-library(shinyscreenshot)
 #remotes::install_github("dreamRs/capture")
 library(capture)
 

@@ -33,7 +33,7 @@ about_server <- function(id) {
           ),
           tags$div(
             tags$img(
-              src = "hackathon.jpg",
+              src = "github.png",
               width = "25%",
               height = "25%",
               style = "padding-top: 10px; border-radius:30px 0 30px 0;",

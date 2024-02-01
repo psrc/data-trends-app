@@ -37,7 +37,6 @@ shinyUI(
                         filename = "data-trend.pdf",
                         icon("camera"), "Download as PDF"
                       )
-                      #screenshotButton(label= "Capture entire page")
       )
       ), # End of Main Panel Modes
     ), # End of Main Panel Fluid Row for Modes Tab
