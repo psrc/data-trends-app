@@ -12,13 +12,15 @@ shinyServer(function(input, output) {
   
   # Modes Page
   banner_server('aboutBanner', 
-                banner_title = "About Trends", 
+                banner_title = "About Puget Sound Trends", 
                 banner_url = "https://www.psrc.org/puget-sound-trends")
   
   
   #left_panel_server('leftMode', page_nm = "Modes")
   mode_overview_server('modeOverview')
   commute_modes_server('CommuteMode')
+  
+  about_server('About')
   
   # Data Sources
   source_server('dataSource')
